@@ -1,0 +1,206 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space m a": "editor::ToggleBookmark",
+      "space m m": "editor::GoToNextBookmark",
+      "space m n": "editor::GoToPreviousBookmark",
+      "space m v": "editor::ViewBookmarks",
+      "space m c": "workspace::ClearBookmarks",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space p": "multi_workspace::NextProject",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space s h": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "left" },
+      ],
+      "space s j": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "down" },
+      ],
+      "space s k": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "up" },
+      ],
+      "space s l": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "right" },
+      ],
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space f h": "workspace::ActivatePaneLeft",
+      "space f l": "workspace::ActivatePaneRight",
+      "space f k": "workspace::ActivatePaneUp",
+      "space f j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space r r": "editor::Rename",
+      "space f f": "pane::RevealInProjectPanel",
+      "space f e": "project_panel::ToggleFocus",
+      "alt-super-o": "project_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space o f": "project_panel::ToggleFocus",
+      "alt-super-o": "project_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "space h": "vim::FirstNonWhitespace",
+      "space l": "vim::EndOfLine",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space e n": "editor::GoToDiagnostic",
+      "space e p": "editor::GoToPreviousDiagnostic",
+      "space e l": "diagnostics::Deploy",
+    },
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "space a": "vim::Matching",
+    },
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "space /": ["editor::ToggleComments", { "advance_downwards": false }],
+    },
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious",
+      "enter": "editor::ConfirmCompletion",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space o f": "workspace::ToggleRightDock",
+      "alt-super-o": "workspace::ToggleRightDock",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space w": ["pane::CloseActiveItem", { "close_pinned": false }],
+      "space shift-w": ["pane::CloseInactiveItems", { "close_pinned": false }],
+    },
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "s": "vim::HelixJumpToWord",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-h": "editor::HalfPageUp",
+      "ctrl-l": "editor::HalfPageDown",
+    },
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "space g n": "editor::GoToHunk",
+      "space g p": "editor::GoToPreviousHunk",
+      "space g h": "editor::ToggleSelectedDiffHunks",
+      "space g r": "git::Restore",
+      "space g m": "git::Commit",
+      "space g a": "git::Add",
+      "space g s s": "git::StashAll",
+      "space g s p": "git::StashPop",
+      "space g s d": "git::DropCurrentStash",
+      "space g s l": "git::ViewStash",
+      "space g d": "git::Diff",
+      "space b d": "git::BranchDiff",
+      "space g b": "git::Blame",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "a": "project_panel::NewFile",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "shift-a": "project_panel::NewDirectory",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "d": null,
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "d": "project_panel::Delete",
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "shift-d": null,
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-k": null,
+    },
+  },
+  {
+    "bindings": {
+      "alt-super-i": "agent::Toggle",
+    },
+  },
+]
