@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "show_edit_predictions": false,
   "cli_default_open_behavior": "existing_window",
   "git_panel": {
     "dock": "left",
@@ -22,6 +23,25 @@
     "biome": false,
   },
   "agent_servers": {
+    "opencode": {
+      "default_config_options": {
+        "mode": "plan",
+      },
+      "type": "registry",
+    },
+    "codex-acp": {
+      "default_config_options": {
+        "mode": "read-only",
+      },
+      "type": "registry",
+    },
+    "cursor": {
+      "type": "registry",
+    },
+    "gemini": {
+      "default_mode": "plan",
+      "type": "registry",
+    },
     "claude-acp": {
       "type": "registry",
     },
@@ -59,6 +79,7 @@
   "use_smartcase_search": true,
   "buffer_font_family": "GeistMono Nerd Font",
   "terminal": {
+    "font_size": 20.0,
     "font_family": "GeistMono Nerd Font",
     "button": false,
     "default_height": 800,
