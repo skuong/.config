@@ -72,13 +72,18 @@
       "space r r": "editor::Rename",
       "space f f": "pane::RevealInProjectPanel",
       "space f e": "project_panel::ToggleFocus",
-      "alt-super-o": "project_panel::ToggleFocus",
     },
   },
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
       "space o f": "project_panel::ToggleFocus",
+      "alt-super-o": "project_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "ProjectPanel || Terminal",
+    "bindings": {
       "alt-super-o": "project_panel::ToggleFocus",
     },
   },
@@ -129,6 +134,18 @@
     "bindings": {
       "space w": ["pane::CloseActiveItem", { "close_pinned": false }],
       "space shift-w": ["pane::CloseInactiveItems", { "close_pinned": false }],
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "ctrl-f": "vim::Right",
+      "ctrl-x": "vim::Left",
+      "ctrl-s": "vim::FirstNonWhitespace",
+      "ctrl-shift-s": "vim::StartOfLine",
+      "ctrl-e": "vim::EndOfLine",
+      "ctrl-b": "vim::Down",
+      "ctrl-d": "vim::DeleteToEndOfLine",
     },
   },
   {
